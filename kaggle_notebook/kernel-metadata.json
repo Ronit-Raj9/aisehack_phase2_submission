@@ -1,0 +1,18 @@
+{
+    "id": "ronitraj1/ronit-pm25-exp01-baseline",
+    "title": "ronit-pm25-exp01-baseline",
+    "code_file": "exp01_baseline.ipynb",
+    "language": "python",
+    "kernel_type": "notebook",
+    "is_private": true,
+    "enable_gpu": true,
+    "enable_internet": true,
+    "dataset_sources": [
+        "ronitraj1/ronit-pm25-phase2-src",
+        "ronitraj1/aisehack-finals"
+    ],
+    "competition_sources": [
+        "aisehack-theme-2"
+    ],
+    "kernel_sources": []
+}

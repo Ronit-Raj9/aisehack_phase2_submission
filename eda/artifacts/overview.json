@@ -1,0 +1,113 @@
+{
+  "generated_at": "2026-04-03T18:44:33",
+  "raw_dir": "/home/raj/Documents/CODING/Hackathon/ANRF_AISEHack_Final_2/data/raw",
+  "test_dir": "/home/raj/Documents/CODING/Hackathon/ANRF_AISEHack_Final_2/data/test_in",
+  "stats_file": "/home/raj/Documents/CODING/Hackathon/ANRF_AISEHack_Final_2/data/stats/feat_min_max.mat",
+  "months": [
+    {
+      "month": "APRIL_16",
+      "label": "April 2016",
+      "timesteps": 715,
+      "start": "2016-04-01 00:00:00",
+      "end": "2016-04-30 18:00:00",
+      "unique_step_minutes": [
+        60
+      ],
+      "window_count_stride_1": 690,
+      "lookback_hours": 10,
+      "forecast_hours": 16
+    },
+    {
+      "month": "JULY_16",
+      "label": "July 2016",
+      "timesteps": 739,
+      "start": "2016-07-01 00:00:00",
+      "end": "2016-07-31 18:00:00",
+      "unique_step_minutes": [
+        60
+      ],
+      "window_count_stride_1": 714,
+      "lookback_hours": 10,
+      "forecast_hours": 16
+    },
+    {
+      "month": "OCT_16",
+      "label": "October 2016",
+      "timesteps": 739,
+      "start": "2016-10-01 00:00:00",
+      "end": "2016-10-31 18:00:00",
+      "unique_step_minutes": [
+        60
+      ],
+      "window_count_stride_1": 714,
+      "lookback_hours": 10,
+      "forecast_hours": 16
+    },
+    {
+      "month": "DEC_16",
+      "label": "December 2016",
+      "timesteps": 739,
+      "start": "2016-12-01 00:00:00",
+      "end": "2016-12-31 18:00:00",
+      "unique_step_minutes": [
+        60
+      ],
+      "window_count_stride_1": 714,
+      "lookback_hours": 10,
+      "forecast_hours": 16
+    }
+  ],
+  "features": [
+    "cpm25",
+    "q2",
+    "t2",
+    "u10",
+    "v10",
+    "swdown",
+    "pblh",
+    "psfc",
+    "rain",
+    "PM25",
+    "NH3",
+    "SO2",
+    "NOx",
+    "NMVOC_e",
+    "NMVOC_finn",
+    "bio"
+  ],
+  "n_features": 16,
+  "grid_shape": [
+    140,
+    124
+  ],
+  "lat_long_shape": [
+    140,
+    124,
+    2
+  ],
+  "test_inputs": {
+    "shape": [
+      218,
+      10,
+      140,
+      124
+    ],
+    "n_samples": 218,
+    "lookback_hours": 10,
+    "spatial_shape": [
+      140,
+      124
+    ]
+  },
+  "problem_framing": {
+    "lookback_hours": 10,
+    "forecast_hours": 16,
+    "window_hours": 26,
+    "evaluation_focus": [
+      "Global SMAPE",
+      "Episode Correlation",
+      "Episode SMAPE"
+    ],
+    "episode_definition": "STL residual > 3 * residual_std and PM2.5 > 1"
+  }
+}

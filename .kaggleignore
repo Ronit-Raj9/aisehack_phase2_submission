@@ -1,0 +1,44 @@
+# Kaggle upload ignore — prevents large/junk files from being uploaded
+# Works like .gitignore
+
+# Data (too large — lives in competition input, not here)
+data/
+*.mat
+*.h5
+*.hdf5
+*.nc
+*.npy
+
+# Model checkpoints (too large, already saved on Kaggle output)
+experiments/
+*.pt
+*.pth
+*.ckpt
+
+# Submissions
+submissions/*.npy
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.eggs/
+*.egg-info/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# WandB
+wandb/
+
+# Git internals
+.git/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

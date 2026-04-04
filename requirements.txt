@@ -1,0 +1,10 @@
+# Runtime deps for train.py / infer.py (install PyTorch separately: https://pytorch.org )
+numpy>=1.24.0
+PyYAML>=6.0
+tqdm>=4.65.0
+
+# Optional: training logs (train.py uses wandb only if initialized)
+# wandb>=0.15.0
+
+# Optional: Kaggle/notebook workflow
+# jupyter>=1.0.0

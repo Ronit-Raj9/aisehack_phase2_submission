@@ -1,0 +1,5 @@
+month,month_label,n_windows,n_train,n_val,share_val_with_any_overlap,share_val_with_gt50_overlap,mean_overlap_hours_with_nearest_train_window,median_overlap_hours_with_nearest_train_window
+APRIL_16,April 2016,690,552,138,1.0,1.0,24.94927536231884,25.0
+JULY_16,July 2016,714,572,142,1.0,1.0,24.880281690140844,25.0
+OCT_16,October 2016,714,572,142,1.0,1.0,24.880281690140844,25.0
+DEC_16,December 2016,714,572,142,1.0,1.0,24.880281690140844,25.0

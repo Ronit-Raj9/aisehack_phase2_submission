@@ -1,0 +1,79 @@
+experiment:
+  exp_name: fno_baseline
+
+paths:
+  raw_path: /kaggle/input/competitions/anrf-aise-hack-phase-2-theme-2-pollution-forecasting-iitd/aisehack-theme-2/raw
+  save_dir: /kaggle/working/experiments/baseline/logs/log.json
+  model_save_path: /kaggle/working/experiments/baseline/checkpoints/fno_baseline.pt
+  live_sync_dir: /kaggle/working/live_checkpoints/baseline
+
+data:
+  months: ["APRIL_16", "JULY_16", "OCT_16", "DEC_16"]
+  val_months: ["OCT_16"]
+  horizon: 26
+  time_input: 10
+  time_out: 16
+  stride: 1
+  val_frac: 0.2
+  seed: 0
+  split_mode: month_holdout
+  S1: 140
+  S2: 124
+
+features:
+  met_variables_raw:
+    - cpm25
+    - q2
+    - t2
+    - u10
+    - v10
+    - swdown
+    - pblh
+    - psfc
+  persist_met_for_physics:
+    - rain
+  emission_variables_raw:
+    - PM25
+    - NH3
+    - SO2
+    - NOx
+    - NMVOC_e
+    - NMVOC_finn
+    - bio
+  derived_variables:
+    - wind_speed
+    - wind_dir_cos
+    - wind_dir_sin
+    - rain_occ
+    - rain_amt
+    - daylight_mask
+    - cpm25_delta1
+    - cpm25_delta3
+    - cpm25_mean3
+    - cpm25_mean6
+    - cpm25_std10
+    - pblh_inverse
+    - ventilation_proxy
+
+model:
+  modes: 12
+  width: 48
+
+training:
+  batch_size: 6
+  epochs: 50
+  lr: 2e-3
+  weight_decay: 1e-4
+  scheduler_step: 10
+  scheduler_gamma: 0.5
+  checkpoint_every: 5
+  resume_from_best: true
+  live_sync_enabled: false
+  live_sync_every: 1
+  live_sync_include_log: true
+
+multi_gpu:
+  enabled: false
+  backend: data_parallel
+  min_gpus: 2
+  device_ids: null
